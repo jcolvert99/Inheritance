@@ -1,7 +1,8 @@
 # This program creates an instance of the SavingsAccount
 # class and an instance of the CD account.
 
-import AccountsClass as accounts
+import c_AccountsClass as accounts
+
 
 def main():
     # Get the account number, interest rate,
@@ -12,7 +13,7 @@ def main():
     balance = float(input('Balance: '))
 
     # Create a SavingsAccount object.
-    savings = accounts.SavingsAccount(acct_num, int_rate, \
+    savings = accounts.SavingsAccount(acct_num, int_rate,
                                       balance)
 
     # Get the account number, interest rate,
@@ -33,21 +34,19 @@ def main():
     print('---------------')
     print('Account number:', savings.get_account_num())
     print('Interest rate:', savings.get_interest_rate())
-    print('Balance: $', \
-          format(savings.get_balance(), ',.2f'), \
+    print('Balance: $',
+          format(savings.get_balance(), ',.2f'),
           sep='')
     print()
     print('CD')
     print('---------------')
     print('Account number:', cd.get_account_num())
     print('Interest rate:', cd.get_interest_rate())
-    print('Balance: $', \
-          format(cd.get_balance(), ',.2f'), \
-          sep='')        
+    print('Balance: $',
+          format(cd.get_balance(), ',.2f'),
+          sep='')
     print('Maturity date:', cd.get_maturity_date())
+
 
 # Call the main function.
 main()
-
-
-    
